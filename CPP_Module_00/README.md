@@ -26,7 +26,7 @@ in complexity.
 
 ## General rules
 
-Compiling
+### Compiling
 - Compile your code with c++ and the flags -Wall -Wextra -Werror
 - Your code should still compile if you add the flag -std=c++98
 Formatting and naming conventions
@@ -44,7 +44,8 @@ character and displayed to the standard output.
 follow your favorite one. But keep in mind that a code your peer-evaluators can’t
 understand is a code they can’t grade. Do your best to write a clean and readable
 code.
-Allowed/Forbidden
+
+### Allowed/Forbidden
 You are not coding in C anymore. Time to C++! Therefore:
 - You are allowed to use almost everything from the standard library. Thus, instead
 of sticking to what you already know, it would be smart to use as much as possible
@@ -59,7 +60,8 @@ friend keywords are forbidden. Otherwise, your grade will be -42.
 no Containers (vector/list/map/and so forth) and no Algorithms (anything that
 requires to include the <algorithm> header) until then. Otherwise, your grade will
 be -42.
-A few design requirements
+
+### A few design requirements
 - Memory leakage occurs in C++ too. When you allocate memory (by using the new
 keyword), you must avoid memory leaks.
 - From Module 02 to Module 09, your classes must be designed in the Orthodox
@@ -70,7 +72,8 @@ means 0 to the exercise.
 they must include all the dependencies they need. However, you must avoid the
 problem of double inclusion by adding include guards. Otherwise, your grade will
 be 0.
-Read me
+
+### Read me
 - You can add some additional files if you need to (i.e., to split your code). As these
 assignments are not verified by a program, feel free to do so as long as you turn in
 the mandatory files.
@@ -118,6 +121,7 @@ replace the oldest one by the new one.
 	- Please note that dynamic allocation is forbidden.
 - Contact
 	- Stands for a phonebook contact.
+
 In your code, the phonebook must be instantiated as an instance of the PhoneBook
 class. Same thing for the contacts. Each one of them must be instantiated as an instance
 of the Contact class. You’re free to design the classes as you like but keep in mind that
@@ -147,8 +151,10 @@ contact information, one field per line.
 - EXIT
 	- The program quits and the contacts are lost forever!
 - Any other input is ignored.
+
 Once a command has been correctly executed, the program waits for another one. It
 stops when the user inputs EXIT.
+
 Give a relevant name to your executable.
 
 http://www.cplusplus.com/reference/string/string/ and of course
@@ -163,20 +169,24 @@ Today is your first day at GlobalBanksters United. After successfully passing th
 the dev team. You also know the recruiter was amazed by how quickly you installed
 Adobe Reader. That little extra made all the difference and helped you defeat all your
 opponents (aka the other applicants): you made it!
+
 Anyway, your manager just gave you some work to do. Your first task is to recreate a
 lost file. Something went wrong and a source file was deleted by mistake. Unfortunately,
 your colleagues don’t know what Git is and use USB keys to share code. At this point, it
 would make sense to leave this place right now. However, you decide to stay. Challenge
 accepted!
+
 Your fellow developers give you a bunch of files. Compiling tests.cpp reveals that
 the missing file is Account.cpp. Lucky you, the header file Account.hpp was saved.
 There is also a log file. Maybe you could use it in order to understand how the Account
 class was implemented.
+
 You start to recreate the Account.cpp file. In only a few minutes, you code a few
 lines of pure awesome C++. After a couple of failed compilations, your program passes
 the tests. Its output matches perfectly the one saved in the log file (except for the
 timestamps which will obviously differ since the tests saved in the log file were run
 before you were hired).
+
 Damn, you’re impressive!
 
 The order in which the destructors are called may differ depending on

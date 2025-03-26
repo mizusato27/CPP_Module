@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 01:32:22 by mizusato          #+#    #+#             */
-/*   Updated: 2025/03/26 22:11:14 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/03/26 23:11:40 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ class Contact
 		void	getNickname(const std::string &nickname);
 		void	getPhoneNumber(const std::string &phoneNumber);
 		void	getDarkestSecret(const std::string &darkestSecret);
+		int		getValidNumber(const std::string &prompt) const;
+		void	printInformation(const int &index) const;
 };
 
 #endif

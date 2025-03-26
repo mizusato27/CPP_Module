@@ -32,7 +32,7 @@ std::string	PhoneBook::getValidInput(const std::string &prompt)
 		if (!(std::getline(std::cin, input)))
 		{
 			std::cout << std::endl;
-			exitPhoneBook();
+			this->exitPhoneBook();
 		}
 		if (!input.empty())
 			return (input);
@@ -52,15 +52,12 @@ void	PhoneBook::addInformation(Contact &contact)
 		this->_count++;
 }
 
-void	PhoneBook::searchInformation(void)
+void	PhoneBook::searchInformation(const Contact &contact)
 {
 	if (this->_count == 0)
 	{
 		std::cout << "PhoneBook is empty" << std::endl;
 		return ;
 	}
-	std::cout << std::setw(10) << "Index" << "|";
-	std::cout << std::setw(10) << "First Name" << "|";
-	std::cout << std::setw(10) << "Last Name" << "|";
-	std::cout << std::setw(10) << "Nickname" << std::endl;
+	contact.printInformation(contact.getValidNumber("Index"));
 }

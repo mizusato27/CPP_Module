@@ -34,3 +34,18 @@ void	Contact::getDarkestSecret(const std::string &darkestSecret)
 {
 	this->_darkestSecret = darkestSecret;
 }
+
+int		Contact::getValidNumber(const std::string &prompt) const
+{
+
+}
+
+void	Contact::printInformation(const int &index) const
+{
+	std::cout << std::setw(10) << "Index" << "|";
+	std::cout << std::setw(10) << "First Name" << "|";
+	std::cout << std::setw(10) << "Last Name" << "|";
+	std::cout << std::setw(10) << "Nickname" << std::endl;
+	std::cout << std::setw(10);
+	if (this->)
+}

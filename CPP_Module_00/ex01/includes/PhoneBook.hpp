@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 01:39:32 by mizusato          #+#    #+#             */
-/*   Updated: 2025/03/26 20:46:32 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/03/26 21:57:27 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,16 @@ class PhoneBook
 	private:
 		Contact	_contacts[8];
 		int		_index;
-		bool	_isFull;
+		int		_count;
 
 	public:
 		PhoneBook(void);
 		~PhoneBook(void);
 
 		void		displayInstruction(void);
-		void		addInformation(const Contact &contact);
+		void		exitPhoneBook(void);
+		std::string	getValidInput(const std::string &prompt);
+		void		addInformation(Contact &contact);
 		void		searchInformation(void);
 };
 

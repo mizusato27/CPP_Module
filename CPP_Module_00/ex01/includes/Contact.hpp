@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 01:32:22 by mizusato          #+#    #+#             */
-/*   Updated: 2025/03/26 20:18:26 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/03/26 22:11:14 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CONTACT_HPP
 
 # include <iostream>
+# include <iomanip>
 # include <stdlib.h>
 
 class Contact

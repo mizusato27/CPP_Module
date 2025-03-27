@@ -35,17 +35,21 @@ void	Contact::getDarkestSecret(const std::string &darkestSecret)
 	this->_darkestSecret = darkestSecret;
 }
 
-int		Contact::getValidNumber(const std::string &prompt) const
+std::string	Contact::formatForDisplay(const std::string &str) const
 {
-
+	if (str.length() > 10)
+		return (str.substr(0, 9) + ".");
+	return (str);
 }
 
-void	Contact::printInformation(const int &index) const
+void	Contact::printInformation(const int index) const
 {
 	std::cout << std::setw(10) << "Index" << "|";
 	std::cout << std::setw(10) << "First Name" << "|";
 	std::cout << std::setw(10) << "Last Name" << "|";
 	std::cout << std::setw(10) << "Nickname" << std::endl;
-	std::cout << std::setw(10);
-	if (this->)
+	std::cout << std::setw(10) << std::to_string(index) << "|";
+	std::cout << std::setw(10) << this->formatForDisplay(this->_firstName) << "|";
+	std::cout << std::setw(10) << this->formatForDisplay(this->_lastName) << "|";
+	std::cout << std::setw(10) << this->formatForDisplay(this->_nickname) << std::endl;
 }

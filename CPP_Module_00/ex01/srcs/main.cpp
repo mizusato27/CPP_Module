@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 01:43:17 by mizusato          #+#    #+#             */
-/*   Updated: 2025/03/26 22:53:45 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/03/27 14:48:30 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(void)
 		else if (command == "ADD")
 			phoneBook.addInformation(newContact);
 		else if (command == "SEARCH")
-			phoneBook.searchInformation(newContact);
+			phoneBook.searchInformation();
 	}
 	return (0);
 }

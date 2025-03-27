@@ -16,13 +16,13 @@ void	PhoneBook::displayInstruction(void)
 	std::cout << "$> ";
 }
 
-void	PhoneBook::exitPhoneBook(void)
+void	PhoneBook::exitPhoneBook(void) const
 {
 	std::cout << "Exit PhoneBook" << std::endl;
 	exit(1);
 }
 
-std::string	PhoneBook::getValidInput(const std::string &prompt)
+std::string	PhoneBook::getValidInput(const std::string &prompt) const
 {
 	std::string	input;
 
@@ -52,12 +52,38 @@ void	PhoneBook::addInformation(Contact &contact)
 		this->_count++;
 }
 
-void	PhoneBook::searchInformation(const Contact &contact)
+int		PhoneBook::getValidNumber(const std::string &prompt) const
 {
+	std::string	input;
+
+	while (1)
+	{
+		std::cout << prompt << ": ";
+		if (!(std::getline(std::cin, input)))
+		{
+			std::cout << std::endl;
+			this->exitPhoneBook();
+		}
+		if (!input.empty())
+		{
+			if (input.length() != 1)
+				continue ;
+			if (isdigit(input[0]) && std::stoi(input) < this->_count)
+				break;
+		}
+	}
+	return (std::stoi(input));
+}
+
+void	PhoneBook::searchInformation(void)
+{
+	int	index;
+
 	if (this->_count == 0)
 	{
 		std::cout << "PhoneBook is empty" << std::endl;
 		return ;
 	}
-	contact.printInformation(contact.getValidNumber("Index"));
+	index = this->getValidNumber("Index");
+	this->_contacts[index].printInformation(index);
 }

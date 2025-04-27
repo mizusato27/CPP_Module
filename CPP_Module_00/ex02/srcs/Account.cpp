@@ -6,13 +6,17 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 22:57:23 by mizusato          #+#    #+#             */
-/*   Updated: 2025/04/27 11:21:26 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/04/27 11:39:09 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
 #include <iomanip>
+
+// todo
+// ・ログが逆になる
+// ・Linuxでの時間表示非対応
 
 // initiate static values
 int		Account::_nbAccounts = 0;

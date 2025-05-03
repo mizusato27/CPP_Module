@@ -68,11 +68,11 @@ int		PhoneBook::getValidNumber(const std::string &prompt) const
 		{
 			if (input.length() != 1)
 				continue ;
-			if (isdigit(input[0]) && std::stoi(input) < this->_count)
+			if (isdigit(input[0]) && atoi(input.c_str()) < this->_count)
 				break;
 		}
 	}
-	return (std::stoi(input));
+	return (atoi(input.c_str()));
 }
 
 void	PhoneBook::searchInformation(void)

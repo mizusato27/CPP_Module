@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 01:32:22 by mizusato          #+#    #+#             */
-/*   Updated: 2025/03/27 14:50:02 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/05/03 16:33:34 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <iomanip>
-# include <stdlib.h>
+# include <cstdlib>
 
 class Contact
 {

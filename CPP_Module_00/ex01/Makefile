@@ -6,14 +6,14 @@
 #    By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/23 20:57:03 by mizusato          #+#    #+#              #
-#    Updated: 2025/03/26 20:12:34 by mizusato         ###   ########.fr        #
+#    Updated: 2025/05/03 16:08:00 by mizusato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= phonebook
 
-CC			= c++
-CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXX			= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRC_DIR		= srcs/
 OBJ_DIR		= objs/
@@ -28,11 +28,11 @@ OBJS		= $(addprefix $(OBJ_DIR), $(OBJ_FILES))
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CPPFLAGS) -I $(INC_DIR) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -I $(INC_DIR) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ_DIR)

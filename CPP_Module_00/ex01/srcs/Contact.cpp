@@ -48,7 +48,7 @@ void	Contact::printInformation(const int index) const
 	std::cout << std::setw(10) << "First Name" << "|";
 	std::cout << std::setw(10) << "Last Name" << "|";
 	std::cout << std::setw(10) << "Nickname" << std::endl;
-	std::cout << std::setw(10) << std::to_string(index) << "|";
+	std::cout << std::setw(10) << index << "|";
 	std::cout << std::setw(10) << this->formatForDisplay(this->_firstName) << "|";
 	std::cout << std::setw(10) << this->formatForDisplay(this->_lastName) << "|";
 	std::cout << std::setw(10) << this->formatForDisplay(this->_nickname) << std::endl;

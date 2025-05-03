@@ -6,20 +6,20 @@
 #    By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/19 03:40:22 by mizusato          #+#    #+#              #
-#    Updated: 2025/03/19 03:50:33 by mizusato         ###   ########.fr        #
+#    Updated: 2025/05/03 16:05:33 by mizusato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME     = megaphone
-CC       = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX       = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC      = megaphone.cpp
 OBJ      = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)

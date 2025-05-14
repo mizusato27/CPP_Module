@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 22:49:11 by mizusato          #+#    #+#             */
-/*   Updated: 2025/04/27 23:00:55 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/05/14 09:44:22 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class	Zombie
 		std::string	_name;
 
 	public:
-		Zombie(void);
+		Zombie(std::string s);
 		~Zombie(void);
 
-		void	announce(void);
+		void	announce(void) const;
 };
 
 Zombie	*newZombie(std::string name);

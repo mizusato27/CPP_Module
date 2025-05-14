@@ -6,20 +6,20 @@
 #    By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 22:33:32 by mizusato          #+#    #+#              #
-#    Updated: 2025/04/27 22:47:27 by mizusato         ###   ########.fr        #
+#    Updated: 2025/05/14 10:08:08 by mizusato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= Zombie
 
 CC			= c++
-CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRC_DIR		= srcs/
 OBJ_DIR		= objs/
 INC_DIR		= includes/
 
-SRC_FILES	=
+SRC_FILES	= main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 OBJ_FILES	= $(SRC_FILES:.cpp=.o)
 
 SRCS		= $(addprefix $(SRC_DIR), $(SRC_FILES))

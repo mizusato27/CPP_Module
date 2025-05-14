@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/27 23:03:52 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/14 09:44:44 by mizusato         ###   ########.fr       */
+/*   Created: 2025/05/14 09:59:10 by mizusato          #+#    #+#             */
+/*   Updated: 2025/05/14 10:06:26 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string s) : _name(s)
+Zombie	*newZombie(std::string name)
 {
-	std::cout << this->_name << " is created." << std::endl;
-}
+	Zombie	*newbornZombie = new Zombie(name);
 
-Zombie::~Zombie(void)
-{
-	std::cout << this->_name << " died." << std::endl;
-}
-
-void	Zombie::announce(void) const
-{
-	std::cout << this->_name << ": BraiiiiiiinnnnzzzZ..." << std::endl;
+	newbornZombie->announce();
+	return (newbornZombie);
 }

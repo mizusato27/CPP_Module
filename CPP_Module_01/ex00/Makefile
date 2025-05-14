@@ -6,14 +6,14 @@
 #    By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 22:33:32 by mizusato          #+#    #+#              #
-#    Updated: 2025/05/14 10:08:08 by mizusato         ###   ########.fr        #
+#    Updated: 2025/05/14 15:34:26 by mizusato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= Zombie
 
-CC			= c++
-CPPFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
+CXX			= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRC_DIR		= srcs/
 OBJ_DIR		= objs/
@@ -36,11 +36,11 @@ CUT			=	\033[K
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CPPFLAGS) -I $(INC_DIR) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -I $(INC_DIR) -c $< -o $@
 
 clean:
 	@rm -rf $(OBJ_DIR)

@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 15:22:46 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/16 16:05:01 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:35:05 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ HumanB::~HumanB(void)
 {
 }
 
-void	HumanB::attack(void)
+void	HumanB::attack(void) const
 {
 	if (this->_weapon)
 	{

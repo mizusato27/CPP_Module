@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 15:11:17 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/16 15:37:50 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:35:19 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Weapon::~Weapon(void)
 {
 }
 
-const std::string	Weapon::getType(void)
+std::string	Weapon::getType(void) const
 {
 	return (this->_type);
 }

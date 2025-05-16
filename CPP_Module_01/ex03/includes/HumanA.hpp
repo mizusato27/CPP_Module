@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 15:04:03 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/16 16:34:54 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/05/16 17:32:44 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	HumanA
 		Weapon&		_weapon;
 
 	public:
-		HumanA(std::string name, Weapon& weapon);
+		HumanA(std::string const& name, Weapon& weapon);
 		~HumanA(void);
 
 		void	attack(void) const;

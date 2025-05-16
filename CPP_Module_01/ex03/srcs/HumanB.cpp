@@ -6,13 +6,13 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 15:22:46 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/16 16:35:05 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/05/16 17:33:23 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : _name(name), _weapon(NULL)
+HumanB::HumanB(std::string const& name) : _name(name), _weapon(NULL)
 {
 }
 

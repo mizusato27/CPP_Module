@@ -6,15 +6,15 @@
 #    By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/15 14:45:32 by mizusato          #+#    #+#              #
-#    Updated: 2025/05/16 05:51:15 by mizusato         ###   ########.fr        #
+#    Updated: 2025/05/17 10:57:06 by mizusato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME     = brain
-CXX       = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-SRC      = main.cpp
-OBJ      = $(SRC:.cpp=.o)
+NAME		= brain
+CXXFLAGS	= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
+SRC			= main.cpp
+OBJ			= $(SRC:.cpp=.o)
 
 RESET		=	\033[0m
 GREEN		=	\033[32m

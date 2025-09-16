@@ -75,7 +75,7 @@ int		PhoneBook::getValidNumber(const std::string &prompt) const
 	return (atoi(input.c_str()));
 }
 
-void	PhoneBook::searchInformation(void)
+void	PhoneBook::searchInformation(void) const
 {
 	int	index;
 

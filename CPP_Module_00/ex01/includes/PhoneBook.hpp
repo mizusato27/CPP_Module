@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 01:39:32 by mizusato          #+#    #+#             */
-/*   Updated: 2025/03/27 14:48:39 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/09/16 17:04:32 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class PhoneBook
 		std::string	getValidInput(const std::string &prompt) const;
 		void		addInformation(Contact &contact);
 		int			getValidNumber(const std::string &prompt) const;
-		void		searchInformation(void);
+		void		searchInformation(void) const;
 };
 
 #endif

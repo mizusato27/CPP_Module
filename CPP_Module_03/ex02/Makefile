@@ -6,7 +6,7 @@
 #    By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 08:27:35 by mizusato          #+#    #+#              #
-#    Updated: 2025/10/20 08:28:30 by mizusato         ###   ########.fr        #
+#    Updated: 2025/10/20 08:32:52 by mizusato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC_DIR		= srcs/
 OBJ_DIR		= objs/
 INC_DIR		= includes/
 
-SRC_FILES	= ClapTrap.cpp FlagTrap.cpp main.cpp ScavTrap.cpp
+SRC_FILES	= ClapTrap.cpp FragTrap.cpp main.cpp ScavTrap.cpp
 OBJ_FILES	= $(SRC_FILES:.cpp=.o)
 
 SRCS		= $(addprefix $(SRC_DIR), $(SRC_FILES))

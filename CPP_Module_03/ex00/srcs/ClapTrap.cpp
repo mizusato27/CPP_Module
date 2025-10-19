@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 01:25:16 by mizusato          #+#    #+#             */
-/*   Updated: 2025/10/20 01:41:23 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/20 03:54:58 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,50 @@ ClapTrap::~ClapTrap()
 
 void	ClapTrap::attack(const std::string &target)
 {
-
+	if (this->_hitPoints == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " cannot attack (no hit points left)." << std::endl;
+		return ;
+	}
+	if (this->_energyPoints == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " cannot attack (no energy points left)." << std::endl;
+		return ;
+	}
+	this->_energyPoints--;
+	std::cout << "ClapTrap " << this->_name << " attacks " << target
+			  << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-
+	if (this->_hitPoints == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " is already at 0 hit points." << std::endl;
+		return ;
+	}
+	if (this->_hitPoints > amount)
+		this->_hitPoints -= amount;
+	else
+		this->_hitPoints = 0;
+	std::cout << "ClapTrap " << this->_name << " takes " << amount
+			  << " points of damage! Current hit points: " << this->_hitPoints << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-
+	if (this->_hitPoints == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " cannot be repaired (no hit points left)." << std::endl;
+		return ;
+	}
+	if (this->_energyPoints == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " cannot be repaired (no energy points left)." << std::endl;
+		return ;
+	}
+	this->_energyPoints--;
+	this->_hitPoints += amount;
+	std::cout << "ClapTrap " << this->_name << " is repaired by " << amount
+			  << " points! Current hit points: " << this->_hitPoints << std::endl;
 }

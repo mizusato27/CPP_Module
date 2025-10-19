@@ -6,13 +6,13 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 04:28:35 by mizusato          #+#    #+#             */
-/*   Updated: 2025/10/20 04:36:14 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/20 05:25:51 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap()
+ScavTrap::ScavTrap() : ClapTrap(), _gateKeeperMode(false)
 {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
@@ -20,7 +20,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 	std::cout << "ScavTrap default constructor called." << std::endl;
 }
 
-ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(const std::string name) : ClapTrap(name), _gateKeeperMode(false)
 {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
@@ -31,13 +31,17 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 {
 	std::cout << "ScavTrap copy constructor called." << std::endl;
+	*this = copy;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
 	std::cout << "ScavTrap copy assignment operator called." << std::endl;
 	if (this != &other)
+	{
 		ClapTrap::operator=(other);
+		this->_gateKeeperMode = other._gateKeeperMode;
+	}
 	return (*this);
 }
 
@@ -65,5 +69,6 @@ void	ScavTrap::attack(const std::string &target)
 
 void	ScavTrap::guardGate()
 {
+	this->_gateKeeperMode = true;
 	std::cout << "ScavTrap " << this->_name << " is now in Gate Keeper mode." << std::endl;
 }

@@ -6,11 +6,11 @@
 #    By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 04:20:18 by mizusato          #+#    #+#              #
-#    Updated: 2025/10/20 04:20:34 by mizusato         ###   ########.fr        #
+#    Updated: 2025/10/20 05:26:36 by mizusato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ClapTrap
+NAME		= ScavTrap
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
@@ -19,7 +19,7 @@ SRC_DIR		= srcs/
 OBJ_DIR		= objs/
 INC_DIR		= includes/
 
-SRC_FILES	= ClapTrap.cpp main.cpp
+SRC_FILES	= ClapTrap.cpp main.cpp ScavTrap.cpp
 OBJ_FILES	= $(SRC_FILES:.cpp=.o)
 
 SRCS		= $(addprefix $(SRC_DIR), $(SRC_FILES))

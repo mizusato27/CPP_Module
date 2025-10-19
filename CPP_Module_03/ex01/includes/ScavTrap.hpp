@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 04:23:06 by mizusato          #+#    #+#             */
-/*   Updated: 2025/10/20 04:25:00 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/20 05:24:17 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 class ScavTrap : public ClapTrap
 {
+	private:
+		bool	_gateKeeperMode;
 	public:
 		ScavTrap();
 		ScavTrap(const std::string name);

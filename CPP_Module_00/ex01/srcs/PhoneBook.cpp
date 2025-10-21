@@ -46,9 +46,11 @@ void	PhoneBook::addInformation(Contact &contact)
 	contact.getNickname(getValidInput("Nickname"));
 	contact.getPhoneNumber(getValidInput("Phone Number"));
 	contact.getDarkestSecret(getValidInput("Darkest Secret"));
+	if (this->_index > 7)
+		this->_index %= 8;
 	this->_contacts[this->_index] = contact;
-	this->_index = (this->_index + 1) % 8;
-	if (this->_index < 8)
+	this->_index++;
+	if (this->_count < 8)
 		this->_count++;
 }
 

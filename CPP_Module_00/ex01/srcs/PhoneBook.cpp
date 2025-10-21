@@ -19,7 +19,7 @@ void	PhoneBook::displayInstruction(void)
 void	PhoneBook::exitPhoneBook(void) const
 {
 	std::cout << "Exit PhoneBook" << std::endl;
-	exit(1);
+	exit(0);
 }
 
 std::string	PhoneBook::getValidInput(const std::string &prompt) const

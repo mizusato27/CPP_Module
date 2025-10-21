@@ -6,18 +6,25 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 01:43:17 by mizusato          #+#    #+#             */
-/*   Updated: 2025/03/27 14:48:30 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/21 22:45:14 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
-int	main(void)
+int	main(int argc, char **argv)
 {
 	PhoneBook	phoneBook;
 	Contact		newContact;
 	std::string	command;
+
+	(void)argv;
+	if (argc != 1)
+	{
+		std::cerr << "Error: Invalid number of arguments" << std::endl;
+		return (1);
+	}
 
 	while (1)
 	{

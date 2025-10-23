@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 22:48:53 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/14 09:58:11 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/23 19:38:30 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int		main(void)
 	// ヒープ上のZombieの解放
 	delete heapZombie;
 
-	return (EXIT_SUCCESS);
+	return (0);
 }

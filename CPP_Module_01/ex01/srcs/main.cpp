@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 15:35:41 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/14 19:47:18 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/23 19:59:43 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int		main(void)
 
 	if (!zombies)
 	{
-		std::cerr << "Error" <<std::endl;
+		std::cerr << "Error" << std::endl;
 		std::cerr << "Failed to create zombie horde." << std::endl;
-		return (EXIT_FAILURE);
+		return (1);
 	}
 	for (int i = 0; i < nbrZombie; i++)
 		zombies[i].announce();
@@ -31,9 +31,9 @@ int		main(void)
 
 	if (!zombie)
 	{
-		std::cerr << "Error" <<std::endl;
+		std::cerr << "Error" << std::endl;
 		std::cerr << "Failed to create zombie horde." << std::endl;
-		return (EXIT_FAILURE);
+		return (1);
 	}
 	zombie[0].announce();
 	delete[] zombie;
@@ -42,5 +42,5 @@ int		main(void)
 	heapZombie->announce();
 	delete heapZombie;
 
-	return (EXIT_SUCCESS);
+	return (0);
 }

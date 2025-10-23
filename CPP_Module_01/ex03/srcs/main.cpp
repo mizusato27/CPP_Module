@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:56:19 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/16 16:02:14 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/23 20:05:27 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ int		main(void)
 		alecks.setWeapon(club);
 		alecks.attack();
 	}
-	return (EXIT_SUCCESS);
+	return (0);
 }

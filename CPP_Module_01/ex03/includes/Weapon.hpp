@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 15:06:01 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/16 17:32:04 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/23 21:00:31 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class	Weapon
 		Weapon(std::string const& weapon);
 		~Weapon(void);
 
-		std::string	getType(void) const;
-		void		setType(std::string const& newType);
+		const std::string&	getType(void) const;
+		void				setType(std::string const& newType);
 };
 
 #endif

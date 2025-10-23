@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 03:51:25 by mizusato          #+#    #+#             */
-/*   Updated: 2025/03/23 20:54:00 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/23 20:50:34 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	main(int argc, char **argv)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 	{
-		for (int i = 1; i < argc; i++)
+		for (int i = 1; i < argc; ++i)
 		{
 			std::string str = argv[i];
-			for (int j = 0; str[j]; j++)
+			for (int j = 0; str[j]; ++j)
 				str[j] = std::toupper(str[j]);
 			std::cout << str;
 		}

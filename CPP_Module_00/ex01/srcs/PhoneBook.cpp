@@ -41,11 +41,11 @@ std::string	PhoneBook::getValidInput(const std::string &prompt) const
 
 void	PhoneBook::addInformation(Contact &contact)
 {
-	contact.getFirstName(getValidInput("First Name"));
-	contact.getLastName(getValidInput("Last Name"));
-	contact.getNickname(getValidInput("Nickname"));
-	contact.getPhoneNumber(getValidInput("Phone Number"));
-	contact.getDarkestSecret(getValidInput("Darkest Secret"));
+	contact.setFirstName(getValidInput("First Name"));
+	contact.setLastName(getValidInput("Last Name"));
+	contact.setNickname(getValidInput("Nickname"));
+	contact.setPhoneNumber(getValidInput("Phone Number"));
+	contact.setDarkestSecret(getValidInput("Darkest Secret"));
 	if (this->_index > 7)
 		this->_index %= 8;
 	this->_contacts[this->_index] = contact;
@@ -95,7 +95,7 @@ void	PhoneBook::searchInformation(void) const
 	while (i < this->_count)
 	{
 		this->_contacts[i].printInformation(i);
-		i++;
+		++i;
 	}
 	index = this->getValidNumber("Index");
 	this->_contacts[index].printDetailInformation();

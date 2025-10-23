@@ -19,7 +19,7 @@ void	PhoneBook::displayInstruction(void)
 void	PhoneBook::exitPhoneBook(void) const
 {
 	std::cout << "Exit PhoneBook" << std::endl;
-	exit(1);
+	exit(0);
 }
 
 std::string	PhoneBook::getValidInput(const std::string &prompt) const
@@ -80,12 +80,23 @@ int		PhoneBook::getValidNumber(const std::string &prompt) const
 void	PhoneBook::searchInformation(void) const
 {
 	int	index;
+	int	i;
 
 	if (this->_count == 0)
 	{
 		std::cout << "PhoneBook is empty" << std::endl;
 		return ;
 	}
+	i = 0;
+	std::cout << std::setw(10) << "Index" << "|";
+	std::cout << std::setw(10) << "First Name" << "|";
+	std::cout << std::setw(10) << "Last Name" << "|";
+	std::cout << std::setw(10) << "Nickname" << std::endl;
+	while (i < this->_count)
+	{
+		this->_contacts[i].printInformation(i);
+		i++;
+	}
 	index = this->getValidNumber("Index");
-	this->_contacts[index].printInformation(index);
+	this->_contacts[index].printDetailInformation();
 }

@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 01:32:22 by mizusato          #+#    #+#             */
-/*   Updated: 2025/05/03 16:33:34 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/23 18:51:08 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class Contact
 		void		getDarkestSecret(const std::string &darkestSecret);
 		std::string	formatForDisplay(const std::string &str) const;
 		void		printInformation(const int index) const;
+		void		printDetailInformation(void) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 01:43:17 by mizusato          #+#    #+#             */
-/*   Updated: 2025/10/23 18:34:08 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/23 19:09:12 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	main(int argc, char **argv)
 	PhoneBook	phoneBook;
 	Contact		newContact;
 	std::string	command;
-	// int			start = 0;
-	// int			end = 0;
+	int			start = 0;
+	int			end = 0;
 
 	(void)argv;
 	if (argc != 1)
@@ -34,11 +34,19 @@ int	main(int argc, char **argv)
 		if (!(std::getline(std::cin, command)))
 			phoneBook.exitPhoneBook();
 
-		// while (start < (int)command.length() && isspace(command[start]))
-		// 	start++;
-		// if (start == (int)command.length())
-		// 	command = "";
-		// end = command.length() - 1;
+		while (start < (int)command.length() && isspace(command[start]))
+			start++;
+		if (start == (int)command.length())
+			command = "";
+		else
+		{
+			end = command.length() - 1;
+			while (end >= 0 && isspace(command[end]))
+				end--;
+			command = command.substr(start, end - start + 1);
+		}
+		start = 0;
+		end = 0;
 
 		if (command == "EXIT")
 			phoneBook.exitPhoneBook();

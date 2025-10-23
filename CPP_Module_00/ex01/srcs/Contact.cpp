@@ -44,12 +44,18 @@ std::string	Contact::formatForDisplay(const std::string &str) const
 
 void	Contact::printInformation(const int index) const
 {
-	std::cout << std::setw(10) << "Index" << "|";
-	std::cout << std::setw(10) << "First Name" << "|";
-	std::cout << std::setw(10) << "Last Name" << "|";
-	std::cout << std::setw(10) << "Nickname" << std::endl;
+
 	std::cout << std::setw(10) << index << "|";
 	std::cout << std::setw(10) << this->formatForDisplay(this->_firstName) << "|";
 	std::cout << std::setw(10) << this->formatForDisplay(this->_lastName) << "|";
 	std::cout << std::setw(10) << this->formatForDisplay(this->_nickname) << std::endl;
+}
+
+void	Contact::printDetailInformation(void) const
+{
+	std::cout << "First Name: " << this->_firstName << std::endl;
+	std::cout << "Last Name: " << this->_lastName << std::endl;
+	std::cout << "Nickname: " << this->_nickname << std::endl;
+	std::cout << "Phone Number: " << this->_phoneNumber << std::endl;
+	std::cout << "Darkest Secret: " << this->_darkestSecret << std::endl;
 }

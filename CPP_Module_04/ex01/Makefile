@@ -7,7 +7,7 @@ SRC_DIR		= srcs/
 OBJ_DIR		= objs/
 INC_DIR		= includes/
 
-SRC_FILES	= Animal.cpp Cat.cpp Dog.cpp main.cpp
+SRC_FILES	= Animal.cpp Brain.cpp Cat.cpp Dog.cpp main.cpp
 OBJ_FILES	= $(SRC_FILES:.cpp=.o)
 
 SRCS		= $(addprefix $(SRC_DIR), $(SRC_FILES))

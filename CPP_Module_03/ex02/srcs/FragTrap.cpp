@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 08:43:48 by mizusato          #+#    #+#             */
-/*   Updated: 2025/10/20 08:46:51 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/26 14:22:51 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ FragTrap::FragTrap(const std::string name) : ClapTrap(name)
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
 	std::cout << "FragTrap copy constructor called." << std::endl;
-	*this = copy;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &other)

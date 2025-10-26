@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 04:28:35 by mizusato          #+#    #+#             */
-/*   Updated: 2025/10/20 05:25:51 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/26 14:22:35 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name), _gateKeeperMode(fal
 	std::cout << "ScavTrap parameterized constructor called for " << this->_name << "." << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
+ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy), _gateKeeperMode(copy._gateKeeperMode)
+
 {
 	std::cout << "ScavTrap copy constructor called." << std::endl;
-	*this = copy;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)

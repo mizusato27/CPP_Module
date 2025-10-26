@@ -81,5 +81,7 @@ int	main()
 	std::cout << "\n--- Exiting Deep Copy Test (Destructors will be called) ---" << std::endl;
 	// original_dog, copy_dog, cat1, cat2 がスコープを抜けるときにデストラクタが呼ばれる
 
+	// Animal* animal = new Animal(); // 抽象クラスはインスタンス化できないのでコメントアウト
+
 	return 0;
 }

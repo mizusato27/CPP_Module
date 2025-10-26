@@ -6,7 +6,7 @@
 /*   By: mizusato <mizusato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 01:13:52 by mizusato          #+#    #+#             */
-/*   Updated: 2025/10/20 01:13:53 by mizusato         ###   ########.fr       */
+/*   Updated: 2025/10/26 14:42:12 by mizusato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,7 +171,7 @@ void	Fixed::setRawBits(const int raw)
 // 固定小数点数からfloatへの変換
 float	Fixed::toFloat(void) const
 {
-	return ((float)_fixedPointValue / (float)(1 << _fractionalBits));
+	return (static_cast<float>(_fixedPointValue) / (1 << _fractionalBits));
 }
 
 // 固定小数点数からintへの変換

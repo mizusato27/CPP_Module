@@ -10,6 +10,12 @@ class Bureaucrat
 		const std::string	_name;
 		int					_grade;
 
+		enum
+		{
+			HIGHEST_GRADE = 1,
+			LOWEST_GRADE = 150
+		};
+
 	public:
 		Bureaucrat();
 		Bureaucrat(const std::string& name, int grade);

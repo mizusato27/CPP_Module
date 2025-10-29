@@ -6,9 +6,9 @@ Bureaucrat::Bureaucrat() : _name("Default"), _grade(LOWEST_GRADE)
 
 Bureaucrat::Bureaucrat(const std::string& name, int grade) : _name(name), _grade(grade)
 {
-	if (_grade < HIGHEST_GRADE)
+	if (this->_grade < HIGHEST_GRADE)
 		throw GradeTooHighException();
-	if (_grade > LOWEST_GRADE)
+	if (this->_grade > LOWEST_GRADE)
 		throw GradeTooLowException();
 }
 
@@ -21,7 +21,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 	if (this != &other)
 	{
 		// _name is const, so we don't assign it
-		_grade = other._grade;
+		this->_grade = other._grade;
 	}
 	return *this;
 }
@@ -42,16 +42,16 @@ int	Bureaucrat::getGrade() const
 
 void	Bureaucrat::incrementGrade()
 {
-	if (_grade == HIGHEST_GRADE)
+	if (this->_grade == HIGHEST_GRADE)
 		throw GradeTooHighException();
-	_grade--;
+	--(this->_grade);
 }
 
 void	Bureaucrat::decrementGrade()
 {
-	if (_grade == LOWEST_GRADE)
+	if (this->_grade == LOWEST_GRADE)
 		throw GradeTooLowException();
-	_grade++;
+	++(this->_grade);
 }
 
 const char*	Bureaucrat::GradeTooHighException::what() const throw()
